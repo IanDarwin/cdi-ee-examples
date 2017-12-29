@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<f:view xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:ui="http://java.sun.com/jsf/facelets"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:h="http://java.sun.com/jsf/html"
+   xmlns:p="http://primefaces.org/ui"
+   contentType="text/html">
+<html>
+    <h:head>
+	<meta name='viewport' content='width=device-width, initial-scale=1'/>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<title><ui:insert name="title"/>CDI EE Demo</title>
+	<link rel="shortcut icon" href="/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="/css/stylesheet.css" title="style" />
+    </h:head>
+
+    <body onload="myInit()">
+	<!-- Every-page Header -->
+	<h1>CDI EE Demo</h1>
+
+	<!-- Rest of page -->
+	<div class="body">
+         <h:messages id="messages" styleClass="message"
+            errorClass="errormsg" infoClass="infomsg" warnClass="warnmsg"
+            rendered="#{showGlobalMessages != 'false'}"/>
+         <ui:insert name="body"/>
+	</div>
+
+	<div class="footer">
+	<p>
+	<a href="/About.web">About this site</a>
+	<a href="/Privacy.web">Privacy Policy</a>
+	Powered by Java Enterprise, JSF and <a href="http://primefaces.org/">PrimeFaces</a>.
+	</p>
+	</div>
+   </body>
+</html>
+</f:view>

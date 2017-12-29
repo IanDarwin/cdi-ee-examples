@@ -1,0 +1,13 @@
+= CDE EE Demo
+
+Some simple demos of using CDI in a Java EE Context.
+
+There's a JSF page that lets you create an "Article" (blog, newsletter, etc).
+
+When you click the Save button, the Article is "saved" (non-persistently, in memory). AND, a CDI event is broadcast,
+which is picked up by an observer to simulate indexing of the articles. There are page views to show the list of
+articles and the list of indexed keywords (only the title is actually indexed, to keep the listing short - it's just a demo).
+
+All the beans are wired together with CDI - there are, for example, NO "JSF Managed Bean" annotations in sight.
+
+Should work on Java EE 7 or 8. Tested on Wildfly 11 (EE 7).

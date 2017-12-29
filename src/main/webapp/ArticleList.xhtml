@@ -1,0 +1,21 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	template="/template/template.xhtml">
+
+<ui:define name="pageTitle">List of Saved Articles</ui:define>
+
+<ui:define name="body">
+	<p:dataTable var='a' value="#{articleList.all()}">
+		<p:column label="Title" width="20%">
+			<h:outputText value="#{a.title}"/>
+		</p:column>
+		<p:column label="Body">
+			<h:outputText value="#{a.body}"/>
+		</p:column>
+	</p:dataTable>
+</ui:define>
+
+</ui:composition>
