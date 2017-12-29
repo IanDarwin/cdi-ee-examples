@@ -16,7 +16,7 @@ public class ArticleHome {
 	String title, body;
 	
 	public String saveArticle() {
-		System.out.println("ArticleHome.saveArticle");
+		System.out.println("ArticleHome.saveArticle()");
 		Article a = new Article();
 		a.title = title;
 		a.body = body;
@@ -26,7 +26,7 @@ public class ArticleHome {
 		// After it saves without exception, we want to
 		// broadcast an event that we created the Article
 		articleSavedEvent.fire(new ArticleEvent(ArticleEvent.Type.NEW, a));
-		System.out.println("Fired event " + articleSavedEvent);
+		System.out.println("ArticleHome.saveArticle: Fired event " + articleSavedEvent);
 		return "index";
 	}
 
