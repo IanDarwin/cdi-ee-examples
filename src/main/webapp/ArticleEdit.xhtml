@@ -9,11 +9,15 @@
 
 <ui:define name="body">
 	<h:form>
-		Title: <h:inputText value="#{articleHome.title}"/>
-		<br/>
-		Body: <h:inputTextarea value="#{articleHome.body}" rows='5' columns='60'/>
-		<br/>
+		<p:panelGrid columns='2'>
+		Title:
+		<h:inputText value="#{articleHome.title}"/>
+
+		Body:
+		<h:inputTextarea value="#{articleHome.body}" rows='5' columns='60'/>
+
 		<p:commandButton value="Save" action="#{articleHome.saveArticle()}"/>
+		</p:panelGrid>
 	</h:form>
 </ui:define>
 
