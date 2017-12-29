@@ -1,7 +1,7 @@
 package cdi;
 
-import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.event.Observes;
@@ -14,7 +14,7 @@ import javax.inject.Named;
 @ApplicationScoped
 public class Indexer {
 	
-	Map<String,Article> map = new HashMap();
+	Map<String,Article> map = new TreeMap<>();
 	
 	public void updateIndex(@Observes ArticleEvent newArticleEvt) {
 		final Article article = newArticleEvt.article;
