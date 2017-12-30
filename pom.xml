@@ -27,13 +27,6 @@
 
 	<dependencies>
 
-		<!-- My own Java API potpourri, either installed locally, or on Central thanks to Sonatatype.org -->
-		<dependency>
-			<groupId>com.darwinsys</groupId>
-			<artifactId>darwinsys-api</artifactId>
-			<version>1.2.0-SNAPSHOT</version>
-		</dependency>
-
 		<!-- Java EE current (7) full -->
 		<dependency>
 			<groupId>javax</groupId>	
