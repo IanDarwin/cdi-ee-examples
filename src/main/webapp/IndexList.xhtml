@@ -8,6 +8,7 @@
 <ui:define name="pageTitle">List of Saved Articles</ui:define>
 
 <ui:define name="body">
+	<h1>CDI EE Demo: Search Index List</h1>
 	<p:dataTable var='x' value="#{indexer.getIndex().keySet()}">
 		<p:column label="Keyword" width="20%">
 			<h:outputText value="#{x}"/>

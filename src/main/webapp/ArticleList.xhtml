@@ -8,6 +8,7 @@
 <ui:define name="pageTitle">List of Saved Articles</ui:define>
 
 <ui:define name="body">
+	<h1>CDI EE Demo: Article List</h1>
 	<p:dataTable var='a' value="#{articleList.all()}">
 		<p:column label="Title" width="20%">
 			<h:outputText value="#{a.title}"/>
