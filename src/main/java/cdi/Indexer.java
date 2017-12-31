@@ -8,6 +8,8 @@ import javax.enterprise.event.Observes;
 import javax.inject.Named;
 
 /** When an Article is created (or deleted) it has to be updated in the index.
+ * We get notified of article changes by @Observes for ArticleEvents, fired
+ * somewhere else in the code.
  * @author Ian Darwin
  */
 @Named
@@ -20,9 +22,9 @@ public class Indexer {
 		final Article article = newArticleEvt.article;
 		System.out.println("Indexer.updateIndex(): INDEXING " + article);
 		
-		// Here would be the code to do the indexing
+		// Do the indexing (a real app would make this persistent, but oh well).
 		for (String s : article.title.split("\\s")) {
-			map.put(s, article);
+			map.put(s.toLowerCase(), article);
 		}
 	}
 	
