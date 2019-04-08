@@ -10,4 +10,7 @@ articles and the list of indexed keywords (only the title is actually indexed, t
 
 All the beans are wired together with CDI - there are, for example, NO "JSF Managed Bean" annotations in sight.
 
-Should work on Java EE 7 or 8. Tested on Wildfly 11 (EE 7).
+There's another demo that shows the ConversationScope, but note that it doesn't actually save or even change
+the values you enter into the form field - yet. Make it so!
+
+Should work on Java EE 8. Tested on Wildfly 14 (EE 8).
