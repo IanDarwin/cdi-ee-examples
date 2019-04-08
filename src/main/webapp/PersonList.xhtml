@@ -1,0 +1,23 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	template="/template/template.xhtml">
+
+<ui:define name="pageTitle">Conversation Demo</ui:define>
+
+<ui:define name="body">
+	<h1>Conversation Demo</h1>
+	<h:form>
+		<p:panelGrid columns='2'>
+			<h:outputText value="Robin Hood"/>
+			<p:commandButton value="Edit" action="#{personHome.load(42)}"/>
+			
+			<h:outputText value="Somebody Else"/>
+			<h:outputText value="Not Editable"/>
+		</p:panelGrid>
+	</h:form>
+</ui:define>
+
+</ui:composition>
