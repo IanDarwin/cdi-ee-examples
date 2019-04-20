@@ -38,7 +38,7 @@ public class Indexer {
 	 */
 	static boolean isStopWord(String s) {
 		if (s.length() == 1) {
-			return false;
+			return true;
 		}
 		return s.equals("an") || s.equals("in") || s.equals("on") || s.equals("to");
 	}
