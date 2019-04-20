@@ -27,7 +27,8 @@ public class ArticleHome {
 		// broadcast an event that we created the Article
 		articleSavedEvent.fire(new ArticleEvent(ArticleEvent.Type.NEW, a));
 		System.out.println("ArticleHome.saveArticle: Fired event " + articleSavedEvent);
-		return "index";
+		// And go back to the main page.
+		return "index" + "?faces-redirect=true";
 	}
 
 	public String getTitle() {
