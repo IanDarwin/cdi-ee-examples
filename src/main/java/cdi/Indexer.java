@@ -32,6 +32,11 @@ public class Indexer {
 		// XXX Later: add indexing of body
 	}
 
+	// List of stop words. Keep in alphabetical order for optimal search
+	private static String[] stopWords = {
+		"an", "in", "my", "of", "on", "the", "to",
+	};
+
 	/** Check for stop words (words not to index).
 	 * ASSERT: Input is in lower case already
 	 * @return True if input is a stopword, false otherwise.
@@ -40,7 +45,15 @@ public class Indexer {
 		if (s.length() == 1) {
 			return true;
 		}
-		return s.equals("an") || s.equals("in") || s.equals("on") || s.equals("to");
+		for (String w : stopWords) {
+			if (w.equals(s)) {
+				return true;
+			}
+			if (w.compareTo(s) == +1) {
+				return false;
+			}
+		}
+		return false;
 	}
 	
 	public Map<String,Article> getIndex() {

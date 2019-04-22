@@ -29,6 +29,7 @@ public class IndexerTest {
 	public void testIsStopWord() {
 		assertTrue(Indexer.isStopWord("in"));
 		assertFalse(Indexer.isStopWord("ian"));
+		assertTrue(Indexer.isStopWord("to"));
 	}
 
 }
